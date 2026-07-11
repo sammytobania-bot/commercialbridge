@@ -43,7 +43,7 @@
   .eyebrow.on-dark{color:var(--cyan-bright)}
   .cyan{color:var(--cyan)}
   section{padding:96px 0}
-  header.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,box-shadow .3s,padding .3s;padding:22px 0}
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:125;transition:background .3s,box-shadow .3s,padding .3s;padding:22px 0}
   header.nav.solid{background:rgba(11,42,64,.96);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.06);padding:14px 0}
   .nav-inner{display:flex;align-items:center;justify-content:space-between}
   .brand{display:flex;align-items:center;color:#fff}
@@ -104,11 +104,13 @@
   .prob-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;position:relative}
   .prob-num{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--cyan);width:34px;height:34px;border-radius:50%;background:rgba(0,169,214,.10);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
   .prob-card p{font-size:16px;color:var(--navy)}
-  .reflex{background:var(--navy);border-radius:var(--r);color:#fff;padding:34px 36px;display:flex;align-items:center;gap:40px;flex-wrap:wrap}
-  .reflex-label{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--slate-light)}
-  .reflex-items{display:flex;gap:14px;flex-wrap:wrap;flex:1}
-  .reflex-chip{background:var(--navy-2);border-radius:999px;padding:9px 18px;font-size:14.5px;font-weight:500}
-  .reflex-result{font-family:var(--serif);font-size:19px;font-style:italic;color:var(--ice);text-align:right}
+  .reflex{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);border:1px solid var(--line-dark);border-radius:var(--r);color:#fff;padding:40px 44px;display:flex;align-items:center;gap:36px;flex-wrap:wrap;position:relative;overflow:hidden}
+  .reflex-label{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--slate-light);flex-shrink:0}
+  .reflex-items{display:flex;gap:12px;flex-wrap:wrap;flex:1}
+  .reflex-chip{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:10px 20px;font-size:14.5px;font-weight:500;color:rgba(255,255,255,.72);display:inline-flex;align-items:center;gap:9px}
+  .reflex-chip::before{content:"";width:15px;height:15px;border-radius:50%;border:1.5px solid var(--slate-light);background:no-repeat center/9px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 2 L8 8 M8 2 L2 8' stroke='%237c93a6' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");flex-shrink:0}
+  .reflex-arrow{flex-shrink:0;color:var(--slate-light);display:flex;align-items:center}
+  .reflex-result{font-family:var(--serif);font-size:20px;font-style:italic;color:var(--ice);text-align:right;flex-shrink:0;line-height:1.35}
   .reflex-result b{color:var(--cyan-bright);font-style:normal}
   .link{background:var(--navy);color:#fff}
   .link .sec-head p{color:var(--slate-light)}
@@ -280,13 +282,17 @@
     .loop-svg{max-width:100%}
     section{padding:72px 0}
     .workshop .ws-wrap,.quote{padding:36px 26px}
+    .reflex{padding:28px 24px;gap:20px}
     .reflex-result{text-align:left;width:100%}
+    .reflex-arrow{transform:rotate(90deg);width:100%;justify-content:center}
   }
   @media(max-width:720px){
-    .navlinks{position:fixed;inset:0 0 0 auto;width:min(80vw,320px);background:var(--navy);flex-direction:column;align-items:flex-start;justify-content:center;gap:22px;padding:40px;transform:translateX(100%);transition:transform .3s;box-shadow:-20px 0 60px rgba(0,0,0,.4)}
+    .navlinks{position:fixed;inset:0 0 0 auto;width:min(80vw,320px);background:var(--navy);flex-direction:column;align-items:flex-start;justify-content:center;gap:22px;padding:40px;transform:translateX(100%);transition:transform .3s;box-shadow:-20px 0 60px rgba(0,0,0,.4);z-index:120}
     .navlinks.open{transform:none}
     .navlinks .btn{width:100%;justify-content:center}
-    .nav-toggle{display:block;z-index:110}
+    .nav-toggle{display:block;z-index:130}
+    .nav-backdrop{position:fixed;inset:0;background:rgba(7,26,40,.72);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;z-index:115}
+    .nav-backdrop.open{opacity:1;visibility:visible}
     .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .nav-toggle.open span:nth-child(2){opacity:0}
     .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
@@ -316,13 +322,13 @@
     </button>
   </div>
 </header>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
 <section class="hero" id="top">
   <div class="hero-bg"></div>
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="eyebrow on-dark">De schakel tussen marketing en sales</div>
         <h1>Wij nemen het commerci&euml;le werk <span class="hl">tussen marketing en sales</span> op.</h1>
         <p class="lede">De grootste commerci&euml;le kansen blijven tussen marketing en sales liggen. Wij pakken dat werk op: elke lead opgevolgd, elke groeikans benut, elk account maximaal ontwikkeld.</p>
         <div class="hero-cta">
@@ -423,7 +429,6 @@
         <p class="persona-quote">&ldquo;Ik maak content, organiseer evenementen en vul de funnel, maar ik hoor nooit wat er daarna mee gebeurt.&rdquo;</p>
         <ul class="persona-list">
           <li>We vullen de zaal, maar niet altijd de pipeline</li>
-          <li>CRM-data is onvolledig of verouderd</li>
           <li>Ik krijg te weinig commerci&euml;le feedback om campagnes te verbeteren</li>
           <li>Feedback van sales bereikt marketing onvoldoende</li>
         </ul>
@@ -441,15 +446,8 @@
           <li>Cross- en upsell gebeurt reactief, niet proactief</li>
           <li>Prospectie krijgt geen prioriteit</li>
           <li>Marketing levert signalen, maar geen concrete opportuniteiten</li>
-          <li>Accountplannen verdwijnen in de dagelijkse drukte</li>
         </ul>
       </div>
-    </div>
-    <h2 class="recognize-title reveal">Klinkt dit herkenbaar?</h2>
-    <div class="prob-grid">
-      <div class="prob-card reveal"><div class="prob-num">1</div><p>Marketing cre&euml;ert meer kansen dan er commercieel benut worden.</p></div>
-      <div class="prob-card reveal"><div class="prob-num">2</div><p>Klanten kennen slechts een deel van je volledige aanbod.</p></div>
-      <div class="prob-card reveal"><div class="prob-num">3</div><p>De dagelijkse werking laat te weinig ruimte voor nieuwe klanten.</p></div>
     </div>
     <div class="reflex reveal">
       <span class="reflex-label">De typische reflex</span>
@@ -457,6 +455,9 @@
         <span class="reflex-chip">Meer sales aannemen</span>
         <span class="reflex-chip">Meer marketeers aannemen</span>
         <span class="reflex-chip">Extra tools kopen</span>
+      </div>
+      <div class="reflex-arrow" aria-hidden="true">
+        <svg width="34" height="16" viewBox="0 0 34 16" fill="none"><path d="M0 8 H30 M24 2 L30 8 L24 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
       <div class="reflex-result">Meer activiteit.<br><b>Nauwelijks meer groei.</b></div>
     </div>
@@ -497,39 +498,12 @@
   </div>
 </section>
 
-<section class="outcomes" id="outcomes">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">Wat het oplevert</div>
-      <h2>Geen extra activiteit.<br>Meer commercieel resultaat.</h2>
-      <p>Wat onze klanten aan de achterkant zien veranderen.</p>
-    </div>
-    <div class="out-grid">
-      <div class="out-card reveal">
-        <div class="out-ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M14 7h7v7"/></svg></div>
-        <h3>Meer commerci&euml;le opportuniteiten</h3>
-        <p>Nieuwe business wordt structureel opgebouwd in plaats van toevallig binnen te komen.</p>
-      </div>
-      <div class="out-card reveal">
-        <div class="out-ic"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Meer uit bestaande klanten</h3>
-        <p>Cross- en upsellkansen worden zichtbaar gemaakt en actief geactiveerd.</p>
-      </div>
-      <div class="out-card reveal">
-        <div class="out-ic"><svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div>
-        <h3>Meer rendement uit marketing</h3>
-        <p>Elke campagne, elk event en elke lead krijgt de commerci&euml;le opvolging die nodig is.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="accel" id="accelerators">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow">Ons aanbod &middot; Growth Accelerators</div>
       <h2>Kies de Growth Accelerator met de hoogste impact.</h2>
-      <p>Elke Growth Accelerator versterkt een specifiek onderdeel van je commerci&euml;le organisatie. Jij kiest waar de grootste hefboom ligt.</p>
+      <p>Elke Growth Accelerator versterkt een specifiek onderdeel van je commerci&euml;le organisatie. Jij kiest waar de grootste hefboom ligt. <b>Geen extra activiteit &mdash; meer commercieel resultaat.</b></p>
     </div>
     <div class="accel-grid">
       <div class="acc-card reveal">
@@ -559,7 +533,7 @@
         <h3>New Business</h3>
         <div class="acc-goal">Structurele instroom van nieuwe kansen</div>
         <ul>
-          <li>Scherp ICP en doelmarkt</li>
+          <li>Scherpe ICP en doelmarkt</li>
           <li>Gestructureerde prospectie</li>
           <li>Groeiende pipeline met kwaliteit</li>
         </ul>
@@ -757,14 +731,16 @@
   onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
   const toggle = document.getElementById('navToggle');
   const links = document.getElementById('navlinks');
-  toggle.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
+  const backdrop = document.getElementById('navBackdrop');
+  const setMenu = (open) => {
+    links.classList.toggle('open', open);
     toggle.classList.toggle('open', open);
+    if (backdrop) backdrop.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open);
-  });
-  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    links.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', false);
-  }));
+  };
+  toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+  if (backdrop) backdrop.addEventListener('click', () => setMenu(false));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce){ document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')); }
   else {

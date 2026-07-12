@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>De 3 grootste commerciële groeilekken in B2B | Commercial Bridge</title>
-<meta name="description" content="Waarom goede marketing en een sterk salesteam niet automatisch leiden tot commerciële groei — en wat er wél voor nodig is. Over Marketing ROI, Account Growth en New Business.">
+<meta name="description" content="Waarom goede marketing en een sterk salesteam niet automatisch leiden tot commerciële groei, en wat er wél voor nodig is. Over Marketing ROI, Account Growth en New Business.">
 <link rel="canonical" href="https://commercialbridge.be/groeilekken-b2b.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Commercial Bridge">
 <meta property="og:locale" content="nl_BE">
 <meta property="og:title" content="De 3 grootste commerciële groeilekken in B2B">
-<meta property="og:description" content="Waarom goede marketing en een sterk salesteam niet automatisch leiden tot commerciële groei — en wat er wél voor nodig is.">
+<meta property="og:description" content="Waarom goede marketing en een sterk salesteam niet automatisch leiden tot commerciële groei, en wat er wél voor nodig is.">
 <meta property="og:url" content="https://commercialbridge.be/groeilekken-b2b.html">
 <meta property="og:image" content="https://commercialbridge.be/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "De 3 grootste commerciële groeilekken in B2B",
-  "description": "Waarom goede marketing en een sterk salesteam niet automatisch leiden tot commerciële groei — en wat er wél voor nodig is.",
+  "description": "Waarom goede marketing en een sterk salesteam niet automatisch leiden tot commerciële groei, en wat er wél voor nodig is.",
   "author": {"@type": "Person", "name": "Sammy Daniszewski"},
   "publisher": {"@type": "Organization", "name": "Commercial Bridge"},
   "inLanguage": "nl-BE",
@@ -51,7 +51,7 @@
   .brand{display:flex;align-items:center;color:#fff}
   .brand-logo{height:38px;width:auto;display:block;transition:height .3s}
   .brand-logo{height:32px}
-  header.nav{position:fixed;top:0;left:0;right:0;z-index:125;transition:background .3s,box-shadow .3s,padding .3s;padding:22px 0}
+  header.nav{position:relative;background:var(--navy);padding:18px 0;border-bottom:1px solid rgba(255,255,255,.08)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between}
   .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
   .wrap{position:relative;z-index:2}
@@ -76,7 +76,7 @@
   .eyebrow{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px}
 
   /* ---- Artikel ---- */
-  .art-hero{background:var(--navy);color:#fff;padding:150px 0 70px;position:relative;overflow:hidden}
+  .art-hero{background:var(--navy);color:#fff;padding:56px 0 70px;position:relative;overflow:hidden}
   .art-hero::before{content:"";position:absolute;width:520px;height:520px;right:-190px;top:-140px;border-radius:50%;background:radial-gradient(circle,rgba(0,178,221,.20),transparent 62%);opacity:.55}
   .art-hero .wrap{position:relative;z-index:2}
   .art-hero h1{font-size:clamp(32px,4.6vw,54px);max-width:900px;margin-bottom:20px}
@@ -115,6 +115,7 @@
   .dl-form input{flex:1;min-width:230px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-family:var(--sans);font-size:15.5px;color:var(--navy)}
   .dl-form input:focus{outline:none;border-color:var(--cyan)}
   .dl-note{font-size:13px;color:var(--slate);margin-top:14px}
+  .dl-err{display:none;font-size:13.5px;color:#c0392b;margin-top:12px;font-weight:500}
   .dl-success{display:none;text-align:center;padding:10px 0}
   .dl-success h3{margin-bottom:8px}
   .dl-success p{color:var(--slate);margin-bottom:20px}
@@ -124,7 +125,7 @@
   .back{display:inline-flex;align-items:center;gap:7px;font-size:14.5px;font-weight:600;color:var(--cyan);margin-bottom:8px}
   @media(max-width:860px){
     .stats{grid-template-columns:repeat(2,1fr)}
-    .art-hero{padding:120px 0 56px}
+    .art-hero{padding:38px 0 50px}
     .art-body{padding:50px 0 20px}
     .dl-card{padding:30px 24px}
   }
@@ -145,7 +146,7 @@
   <div class="wrap">
     <a href="/" class="back">&larr; Terug naar home</a>
     <h1>De 3 grootste commerci&euml;le groeilekken in B2B</h1>
-    <p class="art-lede">Waarom goede marketing en een sterk salesteam niet automatisch leiden tot commerci&euml;le groei &mdash; en wat er w&eacute;l voor nodig is.</p>
+    <p class="art-lede">Waarom goede marketing en een sterk salesteam niet automatisch leiden tot commerci&euml;le groei, en wat er w&eacute;l voor nodig is.</p>
     <div class="art-meta">
       <span>Door Sammy Daniszewski</span>
       <span>&middot;</span>
@@ -159,14 +160,14 @@
 
     <p class="intro">De meeste B2B-bedrijven investeren serieus in marketing &eacute;n in sales. Campagnes worden gelanceerd. Events georganiseerd. Accountmanagers werken hun pipeline bij. Toch blijft de commerci&euml;le groei achter bij de verwachtingen.</p>
 
-    <p>De oorzaak ligt zelden bij een gebrek aan talent of budget. Ze ligt in de blinde vlekken <strong>tussen</strong> de disciplines. In dit artikel bespreek ik de drie groeilekken die ik in vrijwel elke B2B-organisatie terugzie &mdash; en wat eraan te doen is.</p>
+    <p>De oorzaak ligt zelden bij een gebrek aan talent of budget. Ze ligt in de blinde vlekken <strong>tussen</strong> de disciplines. In dit artikel bespreek ik de drie groeilekken die ik in vrijwel elke B2B-organisatie terugzie, en wat eraan te doen is.</p>
 
-    <h2>Groeilek 1 &mdash; Marketing ROI: &ldquo;En&hellip; heeft het iets opgebracht?&rdquo;</h2>
+    <h2>Groeilek 1 &middot; Marketing ROI: &ldquo;En&hellip; heeft het iets opgebracht?&rdquo;</h2>
 
     <div class="story">
       <p>Sarah kijkt tevreden rond. Meer deelnemers dan vorig jaar. Een spreker die applaus kreeg. Lovende reacties. Terwijl de cateraar de laatste glazen opruimt, denkt ze al aan de volgende campagne.</p>
       <p>Maandagochtend stapt de CEO haar kantoor binnen. <strong>&ldquo;En&hellip; hoeveel opportuniteiten zijn eruit ontstaan?&rdquo;</strong></p>
-      <p>&ldquo;Dat weet ik eigenlijk niet&hellip;&rdquo; zegt Sarah. Een stilte. Ze had het event perfect georganiseerd &mdash; maar niemand had ooit afgesproken wat er daarna moest gebeuren.</p>
+      <p>&ldquo;Dat weet ik eigenlijk niet&hellip;&rdquo; zegt Sarah. Een stilte. Ze had het event perfect georganiseerd, maar niemand had ooit afgesproken wat er daarna moest gebeuren.</p>
     </div>
 
     <p>De cijfers zagen er indrukwekkend uit:</p>
@@ -192,7 +193,7 @@
       </ul>
     </div>
 
-    <h2>Groeilek 2 &mdash; Account Growth: &ldquo;Maar dat konden wij toch ook leveren?&rdquo;</h2>
+    <h2>Groeilek 2 &middot; Account Growth: &ldquo;Maar dat konden wij toch ook leveren?&rdquo;</h2>
 
     <div class="story">
       <p>Vermeulen Logistics is al acht jaar klant. Iedereen kent de mensen. Iedereen kent het bedrijf. Tijdens de interne kwartaalmeeting overloopt een accountmanager de ontwikkelingen bij de klant.</p>
@@ -205,7 +206,7 @@
 
     <p class="pull">We zoeken elke dag nieuwe klanten&hellip; terwijl de grootste commerci&euml;le kansen al jaren voor onze neus zaten.</p>
 
-    <p>De grootste commerci&euml;le kans zit vaak niet in nieuwe klanten, maar in de accounts die je al hebt. Bestaande relaties zijn het fundament voor duurzame groei &mdash; mits je ze actief beheert.</p>
+    <p>De grootste commerci&euml;le kans zit vaak niet in nieuwe klanten, maar in de accounts die je al hebt. Bestaande relaties zijn het fundament voor duurzame groei, mits je ze actief beheert.</p>
 
     <div class="helps">
       <div class="eyebrow">Hoe Commercial Bridge helpt</div>
@@ -217,7 +218,7 @@
       </ul>
     </div>
 
-    <h2>Groeilek 3 &mdash; New Business: &ldquo;Bel ons binnen zes maanden nog eens.&rdquo;</h2>
+    <h2>Groeilek 3 &middot; New Business: &ldquo;Bel ons binnen zes maanden nog eens.&rdquo;</h2>
 
     <div class="story">
       <p>Tom had twintig strategische accounts. De eerste gesprekken liepen zoals verwacht: &ldquo;Geen prioriteit.&rdquo; <strong>&ldquo;Bel ons binnen zes maanden nog eens.&rdquo;</strong></p>
@@ -231,7 +232,7 @@
     <p>Nieuwe beslissingsnemers, investeringen, overnames en vacatures zijn triggers. Maar zonder systematische opvolging verdwijnen ze onopgemerkt.</p>
 
     <h3>&ldquo;Nog niet&rdquo; is geen &ldquo;nee&rdquo;</h3>
-    <p>&ldquo;Bel me later&rdquo; betekent in B2B bijna nooit definitief nee. Het betekent: het moment is er nog niet. Maar dat moment komt &mdash; voor wie klaarstaat.</p>
+    <p>&ldquo;Bel me later&rdquo; betekent in B2B bijna nooit definitief nee. Het betekent: het moment is er nog niet. Maar dat moment komt. Voor wie klaarstaat.</p>
 
     <div class="helps">
       <div class="eyebrow">Hoe Commercial Bridge helpt</div>
@@ -247,7 +248,7 @@
 
     <h2>Herken jij jezelf in Sarah? Of in Tom?</h2>
 
-    <p>Of misschien herken je beide verhalen. De meeste B2B-bedrijven hebben geen tekort aan marketing. Geen tekort aan sales. Wat vaak ontbreekt, is iemand die de commerci&euml;le kansen <strong>tussen</strong> die disciplines zichtbaar maakt &mdash; &eacute;n er actief iets mee doet.</p>
+    <p>Of misschien herken je beide verhalen. De meeste B2B-bedrijven hebben geen tekort aan marketing. Geen tekort aan sales. Wat vaak ontbreekt, is iemand die de commerci&euml;le kansen <strong>tussen</strong> die disciplines zichtbaar maakt &eacute;n er actief iets mee doet.</p>
 
     <p class="pull">Dat is de brug die Commercial Bridge bouwt.</p>
 
@@ -258,8 +259,8 @@
   <div class="wrap">
     <div class="dl-card">
       <div id="dlFormWrap">
-        <h2>Download het volledige rapport</h2>
-        <p>Krijg de uitgebreide versie als PDF, met de volledige verhalen, cijfers en de aanpak per groeilek. Vul je e-mailadres in en je ontvangt de download meteen.</p>
+        <h2>Ontvang het verhaal als PDF</h2>
+        <p>De volledige versie met alle verhalen, cijfers en de aanpak per groeilek. Vul je zakelijke e-mailadres in en je krijgt de PDF meteen te zien.</p>
         <form class="dl-form" id="dlForm" novalidate>
           <input type="hidden" name="_subject" value="Nieuwe download: 3 groeilekken (commercialbridge.be)">
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
@@ -267,11 +268,12 @@
           <input type="email" id="dlEmail" name="email" placeholder="naam@bedrijf.be" required>
           <button type="submit" class="btn btn-primary">Stuur mij de PDF</button>
         </form>
+        <p class="dl-err" id="dlErr"></p>
         <p class="dl-note">Je e-mailadres wordt enkel gebruikt om je de PDF te bezorgen en eventueel contact op te nemen. Geen spam.</p>
       </div>
       <div class="dl-success" id="dlSuccess">
         <h3>Bedankt!</h3>
-        <p>Je download staat klaar. Klik hieronder om het rapport te openen.</p>
+        <p>Je download staat klaar. Klik hieronder om de PDF te openen.</p>
         <a href="/3-groeilekken-b2b.pdf" class="btn btn-primary" download>Download de PDF</a>
       </div>
     </div>
@@ -324,8 +326,39 @@
 
 <script>
   const dlForm = document.getElementById('dlForm');
+  const dlErr = document.getElementById('dlErr');
+
+  // Wegwerp- en nepadressen weren
+  const WEGWERP = ['mailinator','tempmail','temp-mail','guerrillamail','10minutemail',
+    'yopmail','throwaway','trashmail','fakeinbox','sharklasers','getnada','maildrop',
+    'dispostable','mailnesia','spamgourmet','mytemp','emailondeck','tempinbox'];
+
+  const checkEmail = (val) => {
+    const v = val.trim().toLowerCase();
+    // Geldig formaat: iets@iets.tld
+    if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/.test(v)) {
+      return 'Vul een geldig e-mailadres in.';
+    }
+    const domein = v.split('@')[1];
+    if (WEGWERP.some(w => domein.includes(w))) {
+      return 'Gebruik een echt e-mailadres, geen tijdelijk wegwerpadres.';
+    }
+    // Overduidelijke nepadressen
+    if (/^(test|fake|nep|asdf|qwerty|aaa|abc|xxx|geen)@/.test(v)) {
+      return 'Vul je echte e-mailadres in.';
+    }
+    return null;
+  };
+
   dlForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    dlErr.style.display = 'none';
+    const fout = checkEmail(document.getElementById('dlEmail').value);
+    if (fout) {
+      dlErr.textContent = fout;
+      dlErr.style.display = 'block';
+      return;
+    }
     if (!dlForm.checkValidity()) { dlForm.reportValidity(); return; }
     const btn = dlForm.querySelector('button[type="submit"]');
     const txt = btn.textContent;

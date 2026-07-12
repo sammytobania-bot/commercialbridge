@@ -11,15 +11,16 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Commercial Bridge">
 <meta property="og:locale" content="nl_BE">
-<meta property="og:title" content="Commercial Bridge | Meer rendement uit marketing en sales">
-<meta property="og:description" content="Wij pakken het commerciële werk op tussen marketing en sales. Meer leads opgevolgd, meer groeikansen benut, elk account maximaal ontwikkeld.">
-<meta property="og:image" content="https://www.commercialbridge.be/og-image.png">
+<meta property="og:title" content="Commercial Bridge | Laat geen commerciële kansen meer verloren gaan">
+<meta property="og:description" content="Wij zorgen ervoor dat marketinginspanningen commercieel worden opgevolgd, groeikansen worden benut en bestaande klanten verder groeien.">
+<meta property="og:image" content="https://commercialbridge.be/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:url" content="https://commercialbridge.be/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Commercial Bridge | Meer rendement uit marketing en sales">
-<meta name="twitter:description" content="Wij pakken het commerciële werk op tussen marketing en sales. Meer leads opgevolgd, meer groeikansen benut, elk account maximaal ontwikkeld.">
-<meta name="twitter:image" content="https://www.commercialbridge.be/og-image.png">
+<meta name="twitter:title" content="Commercial Bridge | Laat geen commerciële kansen meer verloren gaan">
+<meta name="twitter:description" content="Wij zorgen ervoor dat marketinginspanningen commercieel worden opgevolgd, groeikansen worden benut en bestaande klanten verder groeien.">
+<meta name="twitter:image" content="https://commercialbridge.be/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -104,10 +105,17 @@
   .prob-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;position:relative}
   .prob-num{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--cyan);width:34px;height:34px;border-radius:50%;background:rgba(0,169,214,.10);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
   .prob-card p{font-size:16px;color:var(--navy)}
+  .read{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:44px 0}
+  .read-in{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:space-between}
+  .read-txt{flex:1;min-width:280px}
+  .read-txt .eyebrow{margin-bottom:8px}
+  .read-txt h3{font-size:23px;margin-bottom:6px}
+  .read-txt p{color:var(--slate);font-size:15.5px}
+  @media(max-width:720px){.read-in{gap:18px}.read .btn{width:100%;justify-content:center}}
   .reflex{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);border:1px solid var(--line-dark);border-radius:var(--r);color:#fff;padding:40px 44px;display:flex;align-items:center;gap:36px;flex-wrap:wrap;position:relative;overflow:hidden}
   .reflex-label{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--slate-light);flex-shrink:0}
-  .reflex-items{display:flex;gap:12px;flex-wrap:wrap;flex:1}
-  .reflex-chip{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:10px 20px;font-size:14.5px;font-weight:500;color:rgba(255,255,255,.72);display:inline-flex;align-items:center;gap:9px}
+  .reflex-items{display:flex;gap:12px;flex-wrap:wrap;flex:1;align-items:flex-start}
+  .reflex-chip{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:10px 20px;font-size:14.5px;font-weight:500;color:rgba(255,255,255,.72);display:inline-flex;align-items:center;gap:9px;white-space:nowrap}
   .reflex-chip::before{content:"";width:15px;height:15px;border-radius:50%;border:1.5px solid var(--slate-light);background:no-repeat center/9px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 2 L8 8 M8 2 L2 8' stroke='%237c93a6' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");flex-shrink:0}
   .reflex-arrow{flex-shrink:0;color:var(--slate-light);display:flex;align-items:center}
   .reflex-result{font-family:var(--serif);font-size:20px;font-style:italic;color:var(--ice);text-align:right;flex-shrink:0;line-height:1.35}
@@ -279,6 +287,11 @@
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
   @media(max-width:960px){
+    .reflex{padding:30px 26px;gap:18px;flex-direction:column;align-items:center;text-align:center}
+    .reflex-items{flex-direction:column;align-items:stretch;width:100%;gap:10px;flex:none}
+    .reflex-chip{justify-content:flex-start;width:100%;box-sizing:border-box}
+    .reflex-arrow{transform:rotate(90deg);width:100%;justify-content:center;margin:4px 0}
+    .reflex-result{text-align:center;width:100%}
     .hero-grid,.link-grid,.model-grid,.ws-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
     .accel-grid,.outcomes .out-grid,.prob-grid{grid-template-columns:1fr}
     .persona-grid{grid-template-columns:1fr}
@@ -296,9 +309,6 @@
     .loop-svg{max-width:none;width:118%;margin:-24px -9% -28px}
     section{padding:72px 0}
     .workshop .ws-wrap,.quote{padding:36px 26px}
-    .reflex{padding:28px 24px;gap:20px}
-    .reflex-result{text-align:left;width:100%}
-    .reflex-arrow{transform:rotate(90deg);width:100%;justify-content:center}
   }
   @media(max-width:720px){
     .navlinks{position:fixed;inset:0 0 0 auto;width:min(80vw,320px);background:#0B2A40;background:var(--navy);opacity:1;flex-direction:column;align-items:flex-start;justify-content:center;gap:22px;padding:40px;transform:translateX(100%);transition:transform .3s;box-shadow:-20px 0 60px rgba(0,0,0,.4);z-index:120}
@@ -647,6 +657,17 @@
   </div>
 </section>
 
+<section class="read">
+  <div class="wrap read-in">
+    <div class="read-txt reveal">
+      <div class="eyebrow">Lezen</div>
+      <h3>De 3 grootste commerci&euml;le groeilekken in B2B</h3>
+      <p>Waarom goede marketing en een sterk salesteam niet automatisch leiden tot groei &mdash; en wat er w&eacute;l voor nodig is.</p>
+    </div>
+    <a href="/groeilekken-b2b" class="btn btn-ghost reveal">Lees het artikel &rarr;</a>
+  </div>
+</section>
+
 <section class="about" id="about">
   <div class="wrap">
     <div class="about-grid">
@@ -692,7 +713,7 @@
           </div>
           <div class="field"><label for="em">E-mail</label><input id="em" name="email" type="email" placeholder="naam@bedrijf.be" required></div>
           <div class="field"><label for="ms">Waar zou meer groei mogelijk moeten zijn? <span class="opt">(optioneel)</span></label><textarea id="ms" name="Bericht" placeholder="Vertel kort over jullie commerci&euml;le uitdaging"></textarea></div>
-          <button type="submit" class="btn btn-primary">Verstuur en plan kennismaking</button>
+          <button type="submit" class="btn btn-primary">Verstuur</button>
           <p class="form-note">Je gegevens worden enkel gebruikt om contact op te nemen.</p>
         </form>
         <div class="form-success" id="formSuccess">
@@ -805,7 +826,11 @@
         document.getElementById('formSuccess').style.display='block';
       } else {
         btn.disabled = false; btn.textContent = btnText;
-        alert('Er ging iets mis bij het versturen. Probeer het opnieuw of mail rechtstreeks naar sammy@commercialbridge.be.');
+        const reden = (data && data.errors && data.errors.length)
+          ? data.errors.map(x => x.message).join(' | ')
+          : (data && data.error ? data.error : 'onbekende fout');
+        alert('Formspree-fout: ' + reden);
+        console.error('Formspree response:', data);
       }
     } catch(err) {
       btn.disabled = false; btn.textContent = btnText;

@@ -47,10 +47,10 @@
   header.nav{position:fixed;top:0;left:0;right:0;z-index:125;transition:background .3s,box-shadow .3s,padding .3s;padding:22px 0}
   header.nav.solid{background:#0B2A40;box-shadow:0 1px 0 rgba(255,255,255,.06);padding:14px 0}
   .nav-inner{display:flex;align-items:center;justify-content:space-between}
-  .brand{display:flex;align-items:center;color:#fff}
+  .brand{display:flex;align-items:center;color:#fff;flex-shrink:0}
   .brand-logo{height:38px;width:auto;display:block;transition:height .3s}
   header.nav.solid .brand-logo{height:32px}
-  .navlinks{display:flex;align-items:center;gap:30px}
+  .navlinks{display:flex;align-items:center;gap:26px;flex-wrap:nowrap}
   .navlinks a{color:rgba(255,255,255,.82);font-size:14.5px;font-weight:500;transition:color .2s}
   .navlinks a:hover{color:#fff}
   .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:15px;padding:13px 24px;border-radius:999px;cursor:pointer;border:0;transition:transform .18s,background .2s,box-shadow .2s;white-space:nowrap}
@@ -311,7 +311,7 @@
     section{padding:72px 0}
     .workshop .ws-wrap,.quote{padding:36px 26px}
   }
-  @media(max-width:720px){
+  @media(max-width:1100px){
     .navlinks{position:fixed;inset:0 0 0 auto;width:min(80vw,320px);background:#0B2A40;background:var(--navy);opacity:1;flex-direction:column;align-items:flex-start;justify-content:center;gap:22px;padding:40px;transform:translateX(100%);transition:transform .3s;box-shadow:-20px 0 60px rgba(0,0,0,.4);z-index:130}
     .navlinks.open{transform:none}
     .navlinks::before{content:"";position:absolute;inset:0;background:#0B2A40;z-index:-1}
@@ -322,10 +322,10 @@
     .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
     .nav-toggle.open span:nth-child(2){opacity:0}
     .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    .form-row{grid-template-columns:1fr}
     body{font-size:16px}
   }
-  @media(min-width:721px){.nav-toggle{display:none}}
+  @media(min-width:1101px){.nav-toggle{display:none}}
+  @media(max-width:720px){.form-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>

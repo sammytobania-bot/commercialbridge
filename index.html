@@ -64,13 +64,13 @@
   .audience{background:var(--navy-deep);color:var(--ice);padding:26px 0;border-top:1px solid rgba(255,255,255,.06)}
   .audience p{max-width:820px;margin:0 auto;text-align:center;font-size:clamp(15px,1.8vw,18px);line-height:1.5;color:var(--slate-light)}
   .hero .wrap{position:relative;z-index:2}
-  .hero-grid{display:grid;grid-template-columns:1.35fr .75fr;gap:48px;align-items:center}
-  .hero h1{font-size:clamp(34px,4.6vw,58px);line-height:1.08;margin-bottom:26px;text-wrap:balance}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:44px;align-items:start}
+  .hero h1{font-size:clamp(28px,3.9vw,50px);line-height:1.12;margin-bottom:26px;white-space:nowrap}
   .hero h1 .hl{color:var(--cyan-bright)}
-  .hero .lede{font-size:19px;color:var(--ice);max-width:520px;margin-bottom:36px}
+  .hero .lede{font-size:19px;color:var(--ice);max-width:660px;margin-bottom:36px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-  .loop{display:flex;align-items:center;justify-content:center}
-  .loop-svg{width:100%;height:auto;max-width:660px;overflow:visible}
+  .loop{display:flex;align-items:center;justify-content:flex-start}
+  .loop-svg{width:100%;height:auto;max-width:560px;overflow:visible}
   .loop-path{fill:none;stroke:#00B2DD;stroke-width:2.5;stroke-linecap:round}
   .loop-path.dim{stroke:rgba(0,178,221,.42)}
   .node-label{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.14em;fill:var(--slate-light)}
@@ -302,6 +302,8 @@
     .statement-body{padding:32px 24px;max-width:100%}
     .brand-panel .panel-mark{height:90px}
     .hero{padding:130px 0 70px}
+    .hero h1{white-space:normal;font-size:clamp(30px,7.4vw,42px);line-height:1.06;text-wrap:balance}
+    .loop{justify-content:center}
     .loop{overflow:hidden}
     .case-zoom-hint{display:flex}
     .hero-bg{opacity:.28}
@@ -356,7 +358,7 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <h1>Geen commerci&euml;le kansen meer verloren <span class="hl">tussen marketing en sales</span>.</h1>
+        <h1>Geen gemiste kansen <span class="hl">tussen marketing en sales</span>.</h1>
         <p class="lede">Wij zorgen ervoor dat marketinginspanningen commercieel worden opgevolgd, groeikansen worden benut en bestaande klanten verder groeien.</p>
         <div class="hero-cta">
           <a href="#contact" class="btn btn-primary">Plan een kennismaking &rarr;</a>

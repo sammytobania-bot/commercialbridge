@@ -123,14 +123,14 @@
   .prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:44px}
   .persona-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0 48px}
   .recognize-title{font-size:clamp(28px,3.6vw,40px);text-align:center;margin:0 0 36px;color:var(--navy)}
-  .persona-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 30px 12px;box-shadow:0 8px 30px rgba(11,42,64,.05)}
+  .persona-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 30px 12px;box-shadow:0 8px 30px rgba(11,42,64,.05);display:flex;flex-direction:column}
   .persona-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
   .persona-avatar{flex:0 0 auto;width:64px;height:64px;border-radius:50%;overflow:hidden;border:2px solid rgba(0,169,214,.25);background:var(--paper)}
   .persona-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
   .persona-name{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--navy);line-height:1.15}
   .persona-role{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--cyan);line-height:1.15}
   .persona-quote{font-style:italic;color:var(--slate);font-size:15px;line-height:1.55;border-left:2px solid rgba(0,169,214,.35);padding-left:16px;margin:0 0 20px}
-  .persona-list{list-style:none;margin:0;padding:16px 0 0;border-top:1px solid var(--line)}
+  .persona-list{list-style:none;margin:0;padding:16px 0 0;border-top:1px solid var(--line);flex:1;display:flex;flex-direction:column;justify-content:space-between}
   .persona-list li{position:relative;padding:12px 0 12px 30px;font-size:14.5px;color:var(--navy);border-bottom:1px solid var(--line)}
   .persona-list li:last-child{border-bottom:0}
   .persona-list li::before{content:"";position:absolute;left:2px;top:15px;width:16px;height:16px;border-radius:5px;background:rgba(0,169,214,.12)}
